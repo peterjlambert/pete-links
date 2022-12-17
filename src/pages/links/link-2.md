@@ -5,7 +5,8 @@ author: Pete Lambert
 title: Buy Pete Lambert Merch
 url: https://petelambert.teemill.com
 type: link
-order: 1
+order:
+  - "2"
 tags:
   - astro
   - blogging
