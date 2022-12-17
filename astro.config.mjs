@@ -7,8 +7,9 @@ export default defineConfig({
       config: {
         // Use Netlify’s “Git Gateway” authentication and target our default branch
         backend: {
-            name: 'git-gateway',
-            branch: 'main',
+          name: 'git-gateway',
+          branch: 'main',
+          repo: 'peterjlambert/pete-links'
         },
         collections: [
           // Define a link list collection
