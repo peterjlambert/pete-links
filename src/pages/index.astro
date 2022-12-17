@@ -1,84 +1,81 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import SocialsList from '../components/SocialsList.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import SocialsList from "../components/SocialsList.astro";
+import Header from "../components/Header.astro";
+import Logo from "../components/Logo.astro";
 
-const title="Pete Lambert"
-const description="Links & Stuff"
-const pageTitle= `${title} ~ ${description}`;
+const title = "Pete Lambert";
+const description = "Links & Stuff";
+const pageTitle = `${title} ~ ${description}`;
 
-const allLinks = await Astro.glob('../pages/links/*.md');
+const allLinks = await Astro.glob("../pages/links/*.md");
 ---
 
 <Layout title={pageTitle}>
-	<main>
-		<header class="site-header">
-			<h1><span class="text-gradient">{title}</span></h1>
-			<p class="instructions">
-				{description}
-			</p>
-		</header>
+  <main>
+    <Header title={title} description={description} />
 
-		<SocialsList />
+    <SocialsList />
 
-		<ul class="link-card-list">
-      {allLinks.map((link) => 
-        <Card
-          href={link.frontmatter.url}
-          title={link.frontmatter.title}
-          description={link.frontmatter.description}
-          type={link.frontmatter.type}
-        />
-      )}
-
-		</ul>
-	</main>
+    <ul class="link-card-list">
+      {
+        allLinks.map((link) => (
+          <Card
+            href={link.url}
+            title={link.frontmatter.title}
+            description={link.frontmatter.description}
+            type={link.frontmatter.type}
+          />
+        ))
+      }
+    </ul>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-list {
-		display: flex;
-		flex-direction: column;
-		gap: .5rem;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-	
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 60ch;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+  .link-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 </style>

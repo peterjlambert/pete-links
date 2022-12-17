@@ -1,0 +1,45 @@
+---
+import type { AstroComponentInstance } from "astro/dist/runtime/server";
+import Logo from "./Logo.astro";
+
+export interface Props {
+  title: string;
+  description: string;
+  logo?: AstroComponentInstance;
+}
+
+const { title, description, logo } = Astro.props;
+---
+
+<header class="site-header">
+  <h1>
+    <span class="title-text">{title}</span>
+    <Logo />
+  </h1>
+  <p class="instructions">
+    {description}
+  </p>
+</header>
+
+<style>
+  header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  header:has(svg) .title-text {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+  header :is(h1, p) {
+    margin: 0;
+  }
+</style>

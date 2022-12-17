@@ -1,0 +1,16 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout>
+  <Card
+    title={frontmatter.title}
+    description={frontmatter.description}
+    href={frontmatter.href}
+    type={frontmatter.type}
+  />
+  <slot />
+</Layout>

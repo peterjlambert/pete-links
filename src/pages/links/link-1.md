@@ -5,6 +5,5 @@ url: https://www.petelambertmusic.com/
 description: Everything you need to know
 author: Pete Lambert
 type: link
+layout: ../../layouts/Link.astro
 ---
-
-## Test
