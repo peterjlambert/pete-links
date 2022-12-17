@@ -6,7 +6,7 @@ export default defineConfig({
     NetlifyCMS({
       config: {
         backend: {
-          name: 'github',
+          name: 'git-gateway',
           branch: 'main',
           repo: 'peterjlambert/pete-links'
         },
