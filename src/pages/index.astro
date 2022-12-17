@@ -7,7 +7,7 @@ const title="Pete Lambert"
 const description="Links & Stuff"
 const pageTitle= `${title} ~ ${description}`;
 
-const allPosts = await Astro.glob('../pages/posts/*.md');
+const allLinks = await Astro.glob('../pages/links/*.md');
 ---
 
 <Layout title={pageTitle}>
@@ -22,11 +22,12 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 		<SocialsList />
 
 		<ul class="link-card-list">
-      {allPosts.map((post) => 
+      {allLinks.map((link) => 
         <Card
-          href={post.frontmatter.url}
-          title={post.frontmatter.title}
-          body={post.frontmatter.description}
+          href={link.frontmatter.url}
+          title={link.frontmatter.title}
+          description={link.frontmatter.description}
+          type={link.frontmatter.type}
         />
       )}
 

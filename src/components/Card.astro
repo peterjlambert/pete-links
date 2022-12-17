@@ -1,11 +1,12 @@
 ---
 export interface Props {
 	title: string;
-	body: string;
+	description: string;
 	href: string;
+	type: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, description, type } = Astro.props;
 ---
 
 <li class="link-card">
@@ -15,8 +16,9 @@ const { href, title, body } = Astro.props;
 			<span>&rarr;</span>
 		</h2>
 		<p>
-			{body}
+			{description}
 		</p>
+		<slot />
 	</a>
 </li>
 <style>
