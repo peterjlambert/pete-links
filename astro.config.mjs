@@ -11,7 +11,7 @@ export default defineConfig({
             branch: 'main',
         },
         collections: [
-          // Define a blog post collection
+          // Define a link list collection
           {
             name: 'links',
             label: 'Links',
