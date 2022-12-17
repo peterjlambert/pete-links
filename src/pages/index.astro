@@ -10,7 +10,7 @@ const description = "Links & Stuff";
 const pageTitle = `${title} ~ ${description}`;
 const allLinks = await Astro.glob("../pages/links/*.md");
 const sortedLinks = allLinks.sort(
-  (a, b) => b.frontmatter.order - a.frontmatter.order
+  (a, b) => a.frontmatter.order - b.frontmatter.order
 );
 ---
 
@@ -23,15 +23,12 @@ const sortedLinks = allLinks.sort(
     <CardList>
       {
         sortedLinks.map((link) => (
-          <>
-            {link.frontmatter.order}
-            <Card
-              href={link.frontmatter.url}
-              title={link.frontmatter.title}
-              description={link.frontmatter.description}
-              type={link.frontmatter.type}
-            />
-          </>
+          <Card
+            href={link.frontmatter.url}
+            title={link.frontmatter.title}
+            description={link.frontmatter.description}
+            type={link.frontmatter.type}
+          />
         ))
       }
     </CardList>
