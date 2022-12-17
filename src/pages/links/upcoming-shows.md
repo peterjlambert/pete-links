@@ -6,4 +6,5 @@ type: link
 layout: ../../layouts/Link.astro
 order:
   - "3"
+sortOrder: 3
 ---
