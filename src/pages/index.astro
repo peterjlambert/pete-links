@@ -10,7 +10,7 @@ const description = "Links & Stuff";
 const pageTitle = `${title} ~ ${description}`;
 const allLinks = await Astro.glob("../pages/links/*.md");
 const sortedLinks = allLinks.sort(
-  (a, b) => a.frontmatter.order - b.frontmatter.order
+  (a, b) => a.frontmatter.sortOrder - b.frontmatter.sortOrder
 );
 ---
 

@@ -37,9 +37,9 @@ export default defineConfig({
                 ],
               },
               {
-                name: "order",
+                name: "sortOrder",
                 widget: "list",
-                label: "Order",
+                label: "Sort Order",
                 options: [
                   { label: "1", value: "1" },
                   { label: "2", value: "2" },
