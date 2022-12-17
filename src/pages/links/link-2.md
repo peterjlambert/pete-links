@@ -2,11 +2,12 @@
 layout: ../../layouts/Link.astro
 pubDate: 2022-12-17
 author: Pete Lambert
+order:
+  - "2"
 title: Buy Pete Lambert Merch
 url: https://petelambert.teemill.com
 type: link
-order:
-  - "2"
+sortOrder: 2
 tags:
   - astro
   - blogging
