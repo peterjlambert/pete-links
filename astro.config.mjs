@@ -21,6 +21,8 @@ export default defineConfig({
             create: true,
             delete: true,
             preview_path: "{{ slug }}",
+            layout: "../../layouts/Link.astro",
+            sortable_fields: "order",
             fields: [
               { name: "title", widget: "string", label: "Title" },
               { name: "url", widget: "string", label: "URL" },
@@ -34,6 +36,7 @@ export default defineConfig({
                   { label: "Player", value: "player" },
                 ],
               },
+              { name: "order", widget: "number", label: "Order" },
             ],
           },
         ],

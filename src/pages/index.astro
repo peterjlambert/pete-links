@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import SocialsList from "../components/SocialsList.astro";
 import Header from "../components/Header.astro";
-import Logo from "../components/Logo.astro";
+import CardList from "../components/CardList.astro";
 
 const title = "Pete Lambert";
 const description = "Links & Stuff";
@@ -18,18 +18,18 @@ const allLinks = await Astro.glob("../pages/links/*.md");
 
     <SocialsList />
 
-    <ul class="link-card-list">
+    <CardList>
       {
         allLinks.map((link) => (
           <Card
-            href={link.url}
+            href={link.frontmatter.url}
             title={link.frontmatter.title}
             description={link.frontmatter.description}
             type={link.frontmatter.type}
           />
         ))
       }
-    </ul>
+    </CardList>
   </main>
 </Layout>
 
