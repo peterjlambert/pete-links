@@ -22,7 +22,7 @@ export default defineConfig({
             delete: true,
             preview_path: "{{ slug }}",
             layout: "../../layouts/Link.astro",
-            sortable_fields: ["order", "name"],
+            sortable_fields: ["order", "title"],
             fields: [
               { name: "title", widget: "string", label: "Title" },
               { name: "url", widget: "string", label: "URL" },
