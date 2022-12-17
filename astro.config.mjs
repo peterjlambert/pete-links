@@ -5,14 +5,14 @@ export default defineConfig({
   integrations: [
     NetlifyCMS({
       config: {
-        // Use Netlify’s “Git Gateway” authentication and target our default branch
         backend: {
           name: 'git-gateway',
           branch: 'main',
           repo: 'peterjlambert/pete-links'
         },
+        media_folder: 'public/assets',
+        public_folder: '/assets',
         collections: [
-          // Define a link list collection
           {
             name: 'links',
             label: 'Links',
