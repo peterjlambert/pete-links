@@ -6,5 +6,6 @@ description: Everything you need to know
 author: Pete Lambert
 type: link
 layout: ../../layouts/Link.astro
-order: 2
+order:
+  - "1"
 ---
