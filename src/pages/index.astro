@@ -8,8 +8,10 @@ import CardList from "../components/CardList.astro";
 const title = "Pete Lambert";
 const description = "Links & Stuff";
 const pageTitle = `${title} ~ ${description}`;
-
 const allLinks = await Astro.glob("../pages/links/*.md");
+const sortedLinks = allLinks.sort(
+  (a, b) => b.frontmatter.order - a.frontmatter.order
+);
 ---
 
 <Layout title={pageTitle}>
@@ -20,13 +22,16 @@ const allLinks = await Astro.glob("../pages/links/*.md");
 
     <CardList>
       {
-        allLinks.map((link) => (
-          <Card
-            href={link.frontmatter.url}
-            title={link.frontmatter.title}
-            description={link.frontmatter.description}
-            type={link.frontmatter.type}
-          />
+        sortedLinks.map((link) => (
+          <>
+            {link.frontmatter.order}
+            <Card
+              href={link.frontmatter.url}
+              title={link.frontmatter.title}
+              description={link.frontmatter.description}
+              type={link.frontmatter.type}
+            />
+          </>
         ))
       }
     </CardList>
