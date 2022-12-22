@@ -1,8 +1,8 @@
 ---
 export interface Props {
   title: string;
-  description: string;
-  href: string;
+  url: string;
+  description?: string;
   type?: string;
 }
 
@@ -50,10 +50,10 @@ const { href, title, description, type } = Astro.props;
     margin-bottom: 0;
     color: rgb(var(--textColor));
   }
-  .link-card:is(:hover, :focus-within) {
+  .link-card:has(:hover, :focus-within) {
     background-color: rgba(var(--accent), 0.4);
   }
-  .link-card:is(:hover, :focus-within) h2 {
+  .link-card:has(:hover, :focus-within) h2 {
     color: rgb(var(--accent));
   }
 </style>

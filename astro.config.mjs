@@ -16,14 +16,18 @@ export default defineConfig({
         collections: [
           {
             name: "Sections",
-            label: "Sections",
+            label: "sections",
             folder: "src/pages/sections",
             create: true,
             delete: true,
             preview_path: "{{ slug }}",
             layout: "../../layouts/Section.astro",
             fields: [
-              { name: "Section Title", widget: "string", label: "Title" },
+              {
+                label: "Title",
+                name: "title",
+                widget: "string",
+              },
               {
                 label: "Color",
                 name: "color",
@@ -31,10 +35,14 @@ export default defineConfig({
                 allowInput: true,
                 default: "#00DD00",
               },
-              { name: "description", widget: "string", label: "Description" },
+              {
+                label: "Description",
+                name: "description",
+                widget: "string",
+              },
               {
                 label: "Links",
-                name: "Links",
+                name: "links",
                 widget: "list",
                 summary: "Links in this seciton",
                 fields: [
@@ -45,17 +53,22 @@ export default defineConfig({
                     default: "Check out my new album",
                   },
                   {
+                    label: "Description",
+                    name: "description",
+                    widget: "string",
+                  },
+                  {
                     label: "URL",
                     name: "url",
                     widget: "string",
-                    default: "https://petelambertmusic.com",
+                    default: "https://",
                   },
                 ],
               },
               {
+                label: "Sort Order",
                 name: "sortOrder",
                 widget: "number",
-                label: "Sort Order",
                 default: "1",
               },
             ],

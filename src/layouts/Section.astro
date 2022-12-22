@@ -3,6 +3,8 @@ import Section from "../components/Section.astro";
 import Layout from "./Layout.astro";
 
 const { frontmatter } = Astro.props;
+
+console.log("Section Links", frontmatter.links);
 ---
 
 <Layout title={frontmatter.title}>
