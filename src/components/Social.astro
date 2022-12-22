@@ -1,4 +1,9 @@
 ---
-const { platform, url, username } = Astro.props;
+export interface Props {
+  platform: string;
+  url: string;
+}
+const { platform, url } = Astro.props;
 ---
-<a href={`${url}/${username}`}>{platform}</a>
+
+<li><a href={url}>{platform}</a></li>

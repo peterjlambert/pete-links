@@ -6,21 +6,19 @@ export interface Props {
   type?: string;
 }
 
-const { href, title, description, type } = Astro.props;
+const { url, title, description, type } = Astro.props;
 ---
 
 <li class="link-card">
-  <a href={href}>
+  <a href={url}>
     <h3>
       {title}
       <span>&rarr;</span>
     </h3>
-    <p>
-      {description}
-    </p>
-    <slot />
+    {description && <p>{description}</p>}
   </a>
 </li>
+
 <style>
   .link-card {
     display: flex;

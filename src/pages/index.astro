@@ -1,12 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import SocialsList from "../components/SocialsList.astro";
+import Socials from "../components/Socials.astro";
 import Header from "../components/Header.astro";
 import Section from "../components/Section.astro";
 
 const title = "Pete Lambert";
 const description = "Links & Stuff";
 const pageTitle = `${title} ~ ${description}`;
+
+const allSocials = await Astro.glob("../pages/socials/*.md");
 const allSections = await Astro.glob("../pages/sections/*.md");
 const sortedSections = allSections.sort(
   (a, b) => a.frontmatter.sortOrder - b.frontmatter.sortOrder
@@ -16,9 +18,10 @@ const sortedSections = allSections.sort(
 <Layout title={pageTitle}>
   <main>
     <Header title={title} description={description} />
+    <!-- Social Media Links -->
+    <Socials socials={allSocials} />
 
-    <SocialsList />
-
+    <!-- Link Lists -->
     {
       sortedSections.map((section) => (
         <Section

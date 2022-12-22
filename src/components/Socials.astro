@@ -1,0 +1,25 @@
+---
+import Social from "./Social.astro";
+
+export interface Props {
+  socials: {
+    platform: string;
+    username: string;
+    url: string;
+  }[];
+}
+
+const { socials } = Astro.props;
+---
+
+<>
+  {
+    socials && (
+      <ul class="socials">
+        {socials.map((social) => (
+          <Social platform={social.platform} url={social.url} />
+        ))}
+      </ul>
+    )
+  }
+</>

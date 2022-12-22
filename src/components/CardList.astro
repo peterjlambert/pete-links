@@ -2,22 +2,26 @@
 import Card from "./Card.astro";
 
 export interface Props {
-  links: [label: string, description: string, url: string];
+  links: Array<LinkProps>;
+}
+
+export interface LinkProps {
+  label: string;
+  description: string;
+  url: string;
 }
 const { links } = Astro.props;
-console.log("CardList Links", links);
 ---
 
 <ol>
   {
     links &&
       links.map((link) => {
-        console.log("CardList Link", link);
         return (
           <Card
             title={link.label}
             description={link.description}
-            href={link.url}
+            url={link.url}
           />
         );
       })
