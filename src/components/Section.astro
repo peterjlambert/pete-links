@@ -30,11 +30,11 @@ const customAccentColor = colorArray && `(${colorArray.red}, ${colorArray.green}
   .link-section {
     --accent: var(--customAccentColor};
     background: var(--accentColor);
+    background-color: rgb(var(--bgColor));
+    border-bottom: 1px solid rgb(var(--borderColor));
     display: flex;
     flex-direction: column;
     padding: 1rem 0.15rem;
-    background-color: rgb(var(--bgColor));
-    border-bottom: 1px solid rgb(var(--borderColor));
     transition: 0.5s ease-in-out all;
   }
   h2 {
@@ -45,10 +45,10 @@ const customAccentColor = colorArray && `(${colorArray.red}, ${colorArray.green}
     text-transform: uppercase;
   }
   p {
+    color: rgb(var(--textColor));
     font-size: 0.8rem;
     margin-top: 0.5rem;
     margin-bottom: 0;
-    color: rgb(var(--textColor));
   }
   .link-card:is(:hover, :focus-within) {
     background-color: rgba(var(--accent), 0.4);
