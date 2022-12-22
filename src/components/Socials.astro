@@ -11,15 +11,31 @@ const { socials } = Astro.props;
 
 <>
   {
-    socials && (
-      <ul class="socials">
-        {socials.map((social) => (
-          <Social
-            platform={social.frontmatter.platform}
-            url={social.frontmatter.url}
-          />
-        ))}
-      </ul>
-    )
+    socials &&
+      socials.map((social) => (
+        <>
+          <h2 class="visually-hidden">{social.frontmatter.title}</h2>
+          <ul class="socials">
+            {social.frontmatter.links.map(
+              (link: { platform: string; url: string }) => (
+                <li>
+                  <Social platform={link.platform} url={link.url} />
+                </li>
+              )
+            )}
+          </ul>
+        </>
+      ))
   }
 </>
+
+<style>
+  .socials {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+</style>

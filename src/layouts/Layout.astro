@@ -2,7 +2,6 @@
 export interface Props {
   title: string;
 }
-
 const { title } = Astro.props;
 ---
 
@@ -19,13 +18,13 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
+
 <style is:global>
   :root {
-    --accent: 124, 58, 237;
-
+    --accentColor: 124, 58, 237;
     --textColor: 246, 246, 246;
-    --linkColor: var(--accent), 1;
-    --linkHoverColor: var(--accent), 1;
+    --linkColor: var(--accentColor), 1;
+    --linkColorHover: var(--accentColor), 0.6;
     --bgColor: 7, 17, 17;
     --borderColor: 51, 51, 51;
   }
@@ -37,5 +36,27 @@ const { title } = Astro.props;
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+
+  .visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+
+  a {
+    color: rgb(var(--textColor));
+    text-decoration: none;
+    transition: 0.3s ease-in-out all;
+  }
+  a:focus,
+  a:hover {
+    color: rgb(var(--accentColor));
   }
 </style>

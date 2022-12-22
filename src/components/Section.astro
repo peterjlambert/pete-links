@@ -17,12 +17,10 @@ const customAccentColor = colorArray && `(${colorArray.red}, ${colorArray.green}
 ---
 
 <article class="link-section">
-  {showHeader && 
-  <>
+  <header class={showHeader ? '':'visually-hidden'}>
     <h2>{title}</h2>
     {description && <p>{description}</p>}
-  </>
-  }
+  </header>
   {links && links.length > 0 &&
     <CardList links={links} />
   }
@@ -31,6 +29,7 @@ const customAccentColor = colorArray && `(${colorArray.red}, ${colorArray.green}
 <style define:vars={{ customAccentColor }}>
   .link-section {
     --accent: var(--customAccentColor};
+    background: var(--accentColor);
     display: flex;
     flex-direction: column;
     padding: 1rem 0.15rem;

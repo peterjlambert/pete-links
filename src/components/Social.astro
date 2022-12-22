@@ -1,11 +1,40 @@
 ---
+import { Icon } from "astro-icon";
 export interface Props {
   platform: string;
   url: string;
 }
+
 const { platform, url } = Astro.props;
 
-console.log(platform, url);
+const iconPack = platform === "email" ? "mdi" : "cib";
 ---
 
-<li><a href={url}>{platform}</a></li>
+<li class="social">
+  <a href={url} title={platform} class="link">
+    <Icon pack={iconPack} name={platform} className="icon" />
+    <span class="visually-hidden">{platform}</span>
+  </a>
+</li>
+
+<style>
+  .social {
+    display: flex;
+    padding: 0;
+  }
+  .link {
+    color: rgba(var(--linkColor), 1);
+    transition: 0.3s ease-in-out all;
+  }
+  .link:hover,
+  .link:focus {
+    color: rgba(var(--accentColor));
+    transform: scale(1.4);
+  }
+
+  .icon {
+    color: currentColor;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+</style>

@@ -16,7 +16,7 @@ const { title, description, logo } = Astro.props;
     <span class="title-text">{title}</span>
     <Logo />
   </h1>
-  <p class="instructions">
+  <p class="instructions visually-hidden">
     {description}
   </p>
 </header>
@@ -27,6 +27,7 @@ const { title, description, logo } = Astro.props;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 1rem;
   }
   header:has(svg) .title-text {
     border: 0;
