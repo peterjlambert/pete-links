@@ -1,19 +1,25 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 export interface Props {
   title: string;
   url: string;
   description?: string;
-  type?: string;
 }
 
-const { url, title, description, type } = Astro.props;
+const { url, title, description } = Astro.props;
+
+const domain = new URL(url).hostname;
+const size = 24;
+const favicon = `https://www.google.com/s2/favicons?domain=${domain}&sz=${size}`;
 ---
 
 <li class="link-card">
-  <a href={url}>
+  <a href={url} class="link">
+    <img src={favicon} width={24} height={24} alt={domain} />
     <h3>
-      {title}
-      <span>&rarr;</span>
+      <span>{title}</span>
+      <span class="arr">&rarr;</span>
     </h3>
     {description && <p>{description}</p>}
   </a>
@@ -22,19 +28,20 @@ const { url, title, description, type } = Astro.props;
 <style>
   .link-card {
     display: flex;
-    padding: 0.15rem;
-
     transition: 0.5s ease-in-out all;
   }
   .link-card > a {
-    width: 100%;
-    text-decoration: none;
+    color: rgb(var(--textColor));
+    display: flex;
     line-height: 1.4;
     padding: 1rem 1.3rem;
-    color: rgb(var(--textColor));
+    text-decoration: none;
+    width: 100%;
   }
   h3 {
+    display: flex;
     font-size: 0.8rem;
+    gap: 0.5rem;
     margin: 0;
     text-transform: uppercase;
     transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
@@ -45,6 +52,13 @@ const { url, title, description, type } = Astro.props;
     margin-bottom: 0;
     margin-top: 0.5rem;
   }
+
+  .link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
   a {
     border-bottom: 1px solid rgb(var(--accentColor), 0.4);
     transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
@@ -53,7 +67,11 @@ const { url, title, description, type } = Astro.props;
     background-color: rgba(var(--accentColor), 0.1);
     border-bottom-color: transparent;
   }
-  a:is(:hover, :focus-within) h2 {
+  a:is(:hover, :focus-within) h3 {
     color: rgb(var(--accentColor));
+  }
+  a:is(:hover, :focus-within) .arr {
+    color: rgb(var(--accentColor));
+    transform: scale(1.4);
   }
 </style>
