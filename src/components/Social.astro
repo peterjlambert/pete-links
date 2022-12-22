@@ -4,6 +4,8 @@ export interface Props {
   url: string;
 }
 const { platform, url } = Astro.props;
+
+console.log(platform, url);
 ---
 
 <li><a href={url}>{platform}</a></li>

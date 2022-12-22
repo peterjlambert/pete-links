@@ -9,6 +9,8 @@ const description = "Links & Stuff";
 const pageTitle = `${title} ~ ${description}`;
 
 const allSocials = await Astro.glob("../pages/socials/*.md");
+
+console.log(allSocials);
 const allSections = await Astro.glob("../pages/sections/*.md");
 const sortedSections = allSections.sort(
   (a, b) => a.frontmatter.sortOrder - b.frontmatter.sortOrder

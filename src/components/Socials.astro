@@ -1,12 +1,9 @@
 ---
+import type { MarkdownInstance } from "astro";
 import Social from "./Social.astro";
 
 export interface Props {
-  socials: {
-    platform: string;
-    username: string;
-    url: string;
-  }[];
+  socials: MarkdownInstance<Record<string, any>>[];
 }
 
 const { socials } = Astro.props;
@@ -17,7 +14,10 @@ const { socials } = Astro.props;
     socials && (
       <ul class="socials">
         {socials.map((social) => (
-          <Social platform={social.platform} url={social.url} />
+          <Social
+            platform={social.frontmatter.platform}
+            url={social.frontmatter.url}
+          />
         ))}
       </ul>
     )
