@@ -18,9 +18,7 @@ const { socials } = Astro.props;
           <ul class="socials">
             {social.frontmatter.links.map(
               (link: { platform: string; url: string }) => (
-                <li>
-                  <Social platform={link.platform} url={link.url} />
-                </li>
+                <Social platform={link.platform} url={link.url} />
               )
             )}
           </ul>

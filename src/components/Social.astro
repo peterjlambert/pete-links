@@ -10,7 +10,7 @@ const { platform, url } = Astro.props;
 const iconPack = platform === "email" ? "mdi" : "cib";
 ---
 
-<li class="social">
+<li class="item">
   <a href={url} title={platform} class="link">
     <Icon pack={iconPack} name={platform} className="icon" />
     <span class="visually-hidden">{platform}</span>
@@ -18,7 +18,7 @@ const iconPack = platform === "email" ? "mdi" : "cib";
 </li>
 
 <style>
-  .social {
+  .item {
     display: flex;
     padding: 0;
   }
