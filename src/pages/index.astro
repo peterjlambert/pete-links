@@ -1,15 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import SocialsList from "../components/SocialsList.astro";
 import Header from "../components/Header.astro";
-import CardList from "../components/CardList.astro";
+import Section from "../components/Section.astro";
 
 const title = "Pete Lambert";
 const description = "Links & Stuff";
 const pageTitle = `${title} ~ ${description}`;
-const allLinks = await Astro.glob("../pages/links/*.md");
-const sortedLinks = allLinks.sort(
+const allSections = await Astro.glob("../pages/sections/*.md");
+const sortedSections = allSections.sort(
   (a, b) => a.frontmatter.sortOrder - b.frontmatter.sortOrder
 );
 ---
@@ -20,18 +19,16 @@ const sortedLinks = allLinks.sort(
 
     <SocialsList />
 
-    <CardList>
-      {
-        sortedLinks.map((link) => (
-          <Card
-            href={link.frontmatter.url}
-            title={link.frontmatter.title}
-            description={link.frontmatter.description}
-            type={link.frontmatter.type}
-          />
-        ))
-      }
-    </CardList>
+    {
+      sortedSections.map((section) => (
+        <Section
+          title={section.frontmatter.title}
+          description={section.frontmatter.description}
+          links={section.frontmatter.links}
+          color={section.frontmatter.color}
+        />
+      ))
+    }
   </main>
 </Layout>
 

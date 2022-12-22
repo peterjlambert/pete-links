@@ -1,16 +1,15 @@
 ---
-import Card from "../components/Card.astro";
+import Section from "../components/Section.astro";
 import Layout from "./Layout.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-  <Card
+  <Section
     title={frontmatter.title}
     description={frontmatter.description}
-    href={frontmatter.href}
-    type={frontmatter.type}
+    links={frontmatter.links}
+    color={frontmatter.color}
   />
-  <slot />
 </Layout>

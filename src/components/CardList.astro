@@ -1,8 +1,23 @@
 ---
+import Card from "./Card.astro";
+
+export interface Props {
+  links: [title: string, description: string, url: string];
+}
+const { links } = Astro.props;
 ---
 
 <ol>
-  <slot />
+  {
+    links &&
+      links.map((link) => (
+        <Card
+          title={link.title}
+          description={link.description}
+          href={link.url}
+        />
+      ))
+  }
 </ol>
 
 <style>
