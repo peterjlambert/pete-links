@@ -23,8 +23,7 @@ const { url, title, description, type } = Astro.props;
   .link-card {
     display: flex;
     padding: 0.15rem;
-    background-color: rgb(var(--bgColor));
-    border-bottom: 1px solid rgb(var(--borderColor));
+
     transition: 0.5s ease-in-out all;
   }
   .link-card > a {
@@ -33,8 +32,6 @@ const { url, title, description, type } = Astro.props;
     line-height: 1.4;
     padding: 1rem 1.3rem;
     color: rgb(var(--textColor));
-    background-color: rgb(var(--bgColor));
-    opacity: 0.8;
   }
   h3 {
     font-size: 0.8rem;
@@ -48,10 +45,15 @@ const { url, title, description, type } = Astro.props;
     margin-bottom: 0;
     margin-top: 0.5rem;
   }
-  .link-card:has(:hover, :focus-within) {
-    background-color: rgba(var(--accentColor), 0.4);
+  a {
+    border-bottom: 1px solid rgb(var(--accentColor), 0.4);
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   }
-  .link-card:has(:hover, :focus-within) h2 {
+  a:is(:hover, :focus-within) {
+    background-color: rgba(var(--accentColor), 0.1);
+    border-bottom-color: transparent;
+  }
+  a:is(:hover, :focus-within) h2 {
     color: rgb(var(--accentColor));
   }
 </style>

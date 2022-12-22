@@ -13,32 +13,31 @@ export interface Props {
 const { title, description, links, color, showHeader } = Astro.props;
 
 const colorArray = color && hexRgb(color);
-const customAccentColor = colorArray && `(${colorArray.red}, ${colorArray.green}, ${colorArray.blue})`;
+const customAccentColor =
+  colorArray && `${colorArray.red}, ${colorArray.green}, ${colorArray.blue}`;
 ---
 
 <article class="link-section">
-  <header class={showHeader ? '':'visually-hidden'}>
+  <header class={showHeader ? "" : "visually-hidden"}>
     <h2>{title}</h2>
     {description && <p>{description}</p>}
   </header>
-  {links && links.length > 0 &&
-    <CardList links={links} />
-  }
+  {links && links.length > 0 && <CardList links={links} />}
 </article>
 
+<style is:global define:vars={{ customAccentColor }}>
+  .link-section {
+    /* --accentColor: var(--customAccentColor); */
+  }
+</style>
 <style define:vars={{ customAccentColor }}>
   .link-section {
-    --accent: var(--customAccentColor};
-    background: var(--accentColor);
-    background-color: rgb(var(--bgColor));
-    border-bottom: 1px solid rgb(var(--borderColor));
     display: flex;
     flex-direction: column;
     padding: 1rem 0.15rem;
     transition: 0.5s ease-in-out all;
   }
   h2 {
-    color: rgb(var(--accent));
     margin: 0;
     font-size: 1rem;
     transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
@@ -49,11 +48,5 @@ const customAccentColor = colorArray && `(${colorArray.red}, ${colorArray.green}
     font-size: 0.8rem;
     margin-top: 0.5rem;
     margin-bottom: 0;
-  }
-  .link-card:is(:hover, :focus-within) {
-    background-color: rgba(var(--accent), 0.4);
-  }
-  .link-card:is(:hover, :focus-within) h2 {
-    color: rgb(var(--accent));
   }
 </style>

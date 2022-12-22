@@ -1,7 +1,7 @@
 ---
 showHeader: false
 title: Links
-color: "#9a5dff"
+color: "#ff855d"
 description: " "
 links:
   - label: Listen to The Things I Think
