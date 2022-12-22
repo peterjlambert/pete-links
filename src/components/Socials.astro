@@ -15,7 +15,7 @@ const { socials } = Astro.props;
       socials.map((social) => (
         <>
           <h2 class="visually-hidden">{social.frontmatter.title}</h2>
-          <ul class="socials">
+          <ul class="list">
             {social.frontmatter.links.map(
               (link: { platform: string; url: string }) => (
                 <Social platform={link.platform} url={link.url} />
@@ -28,7 +28,7 @@ const { socials } = Astro.props;
 </>
 
 <style>
-  .socials {
+  .list {
     list-style: none;
     padding: 0;
     margin: 0;
