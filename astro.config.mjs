@@ -43,26 +43,26 @@ export default defineConfig({
                 summary: "List of links",
                 fields: [
                   {
-                    label: Quote,
-                    name: quote,
-                    widget: string,
+                    label: "Quote",
+                    name: "quote",
+                    widget: "string",
                     default: "Everything is awesome!",
                   },
                   {
-                    label: Author,
-                    name: author,
-                    widget: object,
+                    label: "Author",
+                    name: "author",
+                    widget: "object",
                     fields: [
                       {
-                        label: Name,
-                        name: name,
-                        widget: string,
+                        label: "Name",
+                        name: "name",
+                        widget: "string",
                         default: "Emmet",
                       },
                       {
-                        label: Avatar,
-                        name: avatar,
-                        widget: image,
+                        label: "Avatar",
+                        name: "avatar",
+                        widget: "image",
                         default: "/img/emmet.jpg",
                       },
                     ],
