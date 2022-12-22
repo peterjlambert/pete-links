@@ -37,6 +37,39 @@ export default defineConfig({
                 ],
               },
               {
+                label: "List of Links",
+                name: "List of Links",
+                widget: "list",
+                summary: "List of links",
+                fields: [
+                  {
+                    label: Quote,
+                    name: quote,
+                    widget: string,
+                    default: "Everything is awesome!",
+                  },
+                  {
+                    label: Author,
+                    name: author,
+                    widget: object,
+                    fields: [
+                      {
+                        label: Name,
+                        name: name,
+                        widget: string,
+                        default: "Emmet",
+                      },
+                      {
+                        label: Avatar,
+                        name: avatar,
+                        widget: image,
+                        default: "/img/emmet.jpg",
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
                 name: "sortOrder",
                 widget: "number",
                 label: "Sort Order",
