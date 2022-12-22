@@ -17,7 +17,7 @@ export default defineConfig({
           {
             name: "Sections",
             label: "Sections",
-            folder: "src/pages/links",
+            folder: "src/pages/sections",
             create: true,
             delete: true,
             preview_path: "{{ slug }}",
