@@ -17,34 +17,6 @@ export default defineConfig({
         public_folder: "/assets",
         collections: [
           {
-            label: "Pages",
-            name: "pages",
-            files: [
-              {
-                label: "Home",
-                name: "index",
-                file: "src/pages/content/index.md",
-                fields: [
-                  {
-                    label: "Title",
-                    name: "title",
-                    widget: "string",
-                  },
-                  {
-                    label: "Intro",
-                    name: "intro",
-                    widget: "markdown",
-                  },
-                  {
-                    label: "Accent Color",
-                    name: "accentColor",
-                    widget: "color",
-                  },
-                ],
-              },
-            ],
-          },
-          {
             name: "Sections",
             label: "sections",
             folder: "src/pages/sections",
