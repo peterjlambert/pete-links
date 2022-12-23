@@ -1,5 +1,7 @@
 ---
+import { getImage } from "@astrojs/image";
 import { Image } from "@astrojs/image/components";
+import { parseDomain, ParseResultType } from "parse-domain";
 
 export interface Props {
   title: string;
@@ -9,14 +11,39 @@ export interface Props {
 
 const { url, title, description } = Astro.props;
 
-const domain = new URL(url).hostname;
+const parseResult = parseDomain(new URL(url).hostname);
+
+const srcDomain =
+  parseResult.type === ParseResultType.Listed
+    ? `${parseResult.domain}.${parseResult.topLevelDomains.join(".")}`
+    : "petelambertmusic.com";
+
+const domain = parseResult;
+
 const size = 24;
-const favicon = `https://www.google.com/s2/favicons?domain=${domain}&sz=${size}`;
+const apiUrl = `https://www.google.com/s2/favicons?domain=${srcDomain}&sz=${size}`;
+
+const src = await getImage({
+  src: apiUrl,
+  alt: srcDomain,
+  format: "webp",
+  width: size,
+  height: size,
+  aspectRatio: 1 / 1,
+});
 ---
 
 <li class="link-card">
   <a href={url} class="link">
-    <img src={favicon} width={24} height={24} alt={domain} />
+    <Image
+      src={src}
+      aspectRatio={1 / 1}
+      width={24}
+      height={24}
+      alt={srcDomain}
+      format={"webp"}
+      data-image-src={apiUrl}
+    />
     <h3>
       <span>{title}</span>
       <span class="arr">&rarr;</span>
