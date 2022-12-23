@@ -29,12 +29,14 @@ const src = await getImage({
   height: size,
   aspectRatio: 1 / 1,
 });
+
+const transformedSrc = src ? src : apiUrl;
 ---
 
 <li class="link-card">
   <a href={url} class="link">
     <Image
-      src={src}
+      src={transformedSrc}
       aspectRatio={1 / 1}
       width={24}
       height={24}
