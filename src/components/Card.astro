@@ -44,11 +44,13 @@ const src = await getImage({
       format={"webp"}
       data-image-src={apiUrl}
     />
-    <h3>
-      <span>{title}</span>
-      <span class="arr">&rarr;</span>
-    </h3>
-    {description && <p>{description}</p>}
+    <div>
+      <h3>
+        <span>{title}</span>
+        <span class="arr">&rarr;</span>
+      </h3>
+      {description && <p>{description}</p>}
+    </div>
   </a>
 </li>
 
