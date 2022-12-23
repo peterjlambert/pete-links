@@ -17,13 +17,41 @@ export default defineConfig({
         public_folder: "/assets",
         collections: [
           {
+            label: "Pages",
+            name: "pages",
+            files: [
+              {
+                label: "Home",
+                name: "index",
+                file: "src/pages/content/index.md",
+                fields: [
+                  {
+                    label: "Title",
+                    name: "title",
+                    widget: "string",
+                  },
+                  {
+                    label: "Intro",
+                    name: "intro",
+                    widget: "markdown",
+                  },
+                  {
+                    label: "Accent Color",
+                    name: "accentColor",
+                    widget: "color",
+                  },
+                ],
+              },
+            ],
+          },
+          {
             name: "Sections",
             label: "sections",
             folder: "src/pages/sections",
-            create: true,
-            delete: true,
             preview_path: "{{ slug }}",
             layout: "../../layouts/Section.astro",
+            create: false,
+            delete: false,
             fields: [
               {
                 label: "Show Header",
@@ -35,13 +63,6 @@ export default defineConfig({
                 label: "Title",
                 name: "title",
                 widget: "string",
-              },
-              {
-                label: "Color",
-                name: "color",
-                widget: "color",
-                allowInput: true,
-                default: "#00DD00",
               },
               {
                 label: "Description",
@@ -89,10 +110,10 @@ export default defineConfig({
             name: "Socials",
             label: "socials",
             folder: "src/pages/socials",
-            create: true,
-            delete: true,
             preview_path: "{{ slug }}",
             layout: "../../layouts/Socials.astro",
+            create: false,
+            delete: false,
             fields: [
               {
                 label: "Title",

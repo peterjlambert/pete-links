@@ -47,14 +47,6 @@ const apiUrl = `https://www.google.com/s2/favicons?domain=${srcDomain}&sz=${size
     display: flex;
     transition: 0.5s ease-in-out all;
   }
-  .link-card > a {
-    color: rgb(var(--textColor));
-    display: flex;
-    line-height: 1.4;
-    padding: 1rem 1.3rem;
-    text-decoration: none;
-    width: 100%;
-  }
   h3 {
     display: flex;
     font-size: 0.8rem;
@@ -64,10 +56,13 @@ const apiUrl = `https://www.google.com/s2/favicons?domain=${srcDomain}&sz=${size
     transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   }
   p {
-    color: rgb(var(--textColor));
+    color: var(--textColor);
     font-size: 0.8rem;
     margin-bottom: 0;
     margin-top: 0.5rem;
+  }
+  .arr {
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .link {
@@ -77,18 +72,24 @@ const apiUrl = `https://www.google.com/s2/favicons?domain=${srcDomain}&sz=${size
     width: 100%;
   }
   a {
-    border-bottom: 1px solid rgb(var(--accentColor), 0.4);
+    border-bottom: 1px solid var(--borderColor);
+    display: flex;
+    line-height: 1.4;
+    padding: 1rem 1.3rem;
+    text-decoration: none;
     transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    width: 100%;
   }
-  a:is(:hover, :focus-within) {
-    background-color: rgba(var(--accentColor), 0.1);
-    border-bottom-color: transparent;
+  a:is(:hover, :focus, :focus-within) {
+    background-color: var(--bgColor);
+    background-image: var(--bgGradient);
+    background-size: 100vh 100vw;
   }
-  a:is(:hover, :focus-within) h3 {
-    color: rgb(var(--accentColor));
+  a:is(:hover, :focus, :focus-within) h3 {
+    color: currentColor;
   }
-  a:is(:hover, :focus-within) .arr {
-    color: rgb(var(--accentColor));
+  a:is(:hover, :focus, :focus-within) .arr {
+    color: var(--linkColorHover);
     transform: scale(1.4);
   }
 </style>

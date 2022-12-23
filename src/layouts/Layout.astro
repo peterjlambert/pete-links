@@ -22,16 +22,27 @@ const { title } = Astro.props;
 <style is:global>
   :root {
     --accentColor: 185, 89, 76;
-    --textColor: 246, 246, 246;
-    --linkColor: var(--accentColor), 1;
-    --linkColorHover: var(--accentColor), 0.6;
-    --bgColor: 7, 17, 17;
-    --borderColor: 51, 51, 51;
+
+    --textColor: rgba(246, 246, 246, 1);
+    --linkColor: rgba(255, 255, 255, 1);
+    --linkColorHover: rgba(255, 255, 255, 0.6);
+    --bgColor: rgb(var(--accentColor));
+    --borderColor: rgba(0, 0, 0, 0.2);
+    --bgGradient: radial-gradient(
+        at 79% 56%,
+        hsla(347, 0%, 100%, 0.14) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 57% 10%, hsla(200, 0%, 0%, 0.21) 0px, transparent 50%),
+      radial-gradient(at 5% 95%, hsla(0, 0%, 0%, 0.73) 0px, transparent 50%),
+      radial-gradient(at 98% 51%, hsla(0, 0%, 100%, 0.02) 0px, transparent 50%);
   }
   html {
     font-family: system-ui, sans-serif;
-    background-color: rgb(var(--bgColor));
-    color: rgb(var(--textColor));
+    background-color: var(--bgColor);
+    background-image: var(--bgGradient);
+    color: var(--textColor);
+    height: 100%;
   }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
@@ -51,12 +62,12 @@ const { title } = Astro.props;
   }
 
   a {
-    color: rgb(var(--textColor));
+    color: var(--linkColor);
     text-decoration: none;
     transition: 0.3s ease-in-out all;
   }
   a:focus,
   a:hover {
-    color: rgb(var(--accentColor));
+    color: var(--linkHoverColor);
   }
 </style>

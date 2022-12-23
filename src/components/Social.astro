@@ -23,12 +23,10 @@ const iconPack = platform === "email" ? "mdi" : "cib";
     padding: 0;
   }
   .link {
-    color: rgba(var(--linkColor), 1);
     transition: 0.3s ease-in-out all;
   }
-  .link:hover,
-  .link:focus {
-    color: rgba(var(--accentColor));
+  .link:is(:hover, :focus) {
+    color: var(--linkColorHover);
     transform: scale(1.4);
   }
 
