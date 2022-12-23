@@ -1,5 +1,4 @@
 ---
-import { getImage } from "@astrojs/image";
 import { Image } from "@astrojs/image/components";
 import { parseDomain, ParseResultType } from "parse-domain";
 
@@ -20,23 +19,12 @@ const srcDomain =
 
 const size = 24;
 const apiUrl = `https://www.google.com/s2/favicons?domain=${srcDomain}&sz=${size}`;
-
-const src = await getImage({
-  src: apiUrl,
-  alt: srcDomain,
-  format: "webp",
-  width: size,
-  height: size,
-  aspectRatio: 1 / 1,
-});
-
-const transformedSrc = src ? src : apiUrl;
 ---
 
 <li class="link-card">
   <a href={url} class="link">
     <Image
-      src={transformedSrc}
+      src={apiUrl}
       aspectRatio={1 / 1}
       width={24}
       height={24}
