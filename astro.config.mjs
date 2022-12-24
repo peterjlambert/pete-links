@@ -143,8 +143,6 @@ export default defineConfig({
         ],
       },
     }),
-    image({
-      logLevel: "debug",
-    }),
+    image(),
   ],
 });
