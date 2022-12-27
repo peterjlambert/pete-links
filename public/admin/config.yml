@@ -25,6 +25,7 @@ collections:
         widget: image
       - label: Text Color
         name: textColor
+        widget: color
         default: "#FFFFFF"
       - label: Accent One
         name: accentOne
