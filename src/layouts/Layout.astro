@@ -4,11 +4,15 @@ export interface Props {
   title: string;
   description: string;
   accentOne: string;
+  textColor: string;
 }
-const { title, description, accentOne } = Astro.props;
+const { title, description, accentOne, textColor } = Astro.props;
 
 const accentOneHexToRgb = hexRgb(accentOne);
 const accentOneRgb = `${accentOneHexToRgb.red}, ${accentOneHexToRgb.green}, ${accentOneHexToRgb.blue}`;
+
+const textColorToRgb = hexRgb(textColor);
+const textColorRgb = `${textColorToRgb.red}, ${textColorToRgb.green}, ${textColorToRgb.blue}`;
 ---
 
 <!DOCTYPE html>
@@ -26,11 +30,11 @@ const accentOneRgb = `${accentOneHexToRgb.red}, ${accentOneHexToRgb.green}, ${ac
   </body>
 </html>
 
-<style is:global define:vars={{ accentOne, accentOneRgb }}>
+<style is:global define:vars={{ accentOne, accentOneRgb, textColorRgb }}>
   :root {
-    --textColor: rgba(246, 246, 246, 1);
-    --linkColor: rgba(255, 255, 255, 1);
-    --linkColorHover: rgba(255, 255, 255, 0.6);
+    --textColor: rgba(var(--textColorRgb), 1);
+    --linkColor: rgba(var(--textColorRgb), 1);
+    --linkColorHover: rgba(var(--textColorRgb), 0.6);
     --bgColor: var(--accentOne);
     --borderColor: rgba(0, 0, 0, 0.2);
     --bgGradient: radial-gradient(

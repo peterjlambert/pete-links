@@ -23,6 +23,9 @@ collections:
       - label: Logo
         name: logo
         widget: image
+      - label: Text Color
+        name: textColor
+        default: "#FFFFFF"
       - label: Accent One
         name: accentOne
         widget: color
