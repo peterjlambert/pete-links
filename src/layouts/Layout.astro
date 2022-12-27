@@ -1,10 +1,14 @@
 ---
+import hexRgb from "hex-rgb";
 export interface Props {
   title: string;
   description: string;
-  accentColorOne: string;
+  accentOne: string;
 }
-const { title, description, accentColorOne } = Astro.props;
+const { title, description, accentOne } = Astro.props;
+
+const accentOneHexToRgb = hexRgb(accentOne);
+const accentOneRgb = `${accentOneHexToRgb.red}, ${accentOneHexToRgb.green}, ${accentOneHexToRgb.blue}`;
 ---
 
 <!DOCTYPE html>
@@ -22,12 +26,12 @@ const { title, description, accentColorOne } = Astro.props;
   </body>
 </html>
 
-<style is:global define:vars={{ accentColorOne }}>
+<style is:global define:vars={{ accentOne, accentOneRgb }}>
   :root {
     --textColor: rgba(246, 246, 246, 1);
     --linkColor: rgba(255, 255, 255, 1);
     --linkColorHover: rgba(255, 255, 255, 0.6);
-    --bgColor: var(--accentColorOne);
+    --bgColor: var(--accentOne);
     --borderColor: rgba(0, 0, 0, 0.2);
     --bgGradient: radial-gradient(
         at 79% 56%,
@@ -49,12 +53,12 @@ const { title, description, accentColorOne } = Astro.props;
     margin: 0;
   }
   body {
-    --bgGradiantTopColor: var(--accentColorOne) 00;
-    --bgGradiantBottomColor: var(--accentColorOne) 99;
+    --bgGradiantTopColor: rgba(var(--accentOneRgb), 1);
+    --bgGradiantBottomColor: rgba(var(--accentOneRgb), 0);
     background-image: linear-gradient(
       to bottom,
-      var(--bgGradiantTopColor) 00 0%,
-      var(--bgGradiantBottomColor) 99 30vh
+      var(--bgGradiantTopColor) 0%,
+      var(--bgGradiantBottomColor) 20vh
     );
     margin: 0;
     height: 100%;
