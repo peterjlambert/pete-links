@@ -32,9 +32,9 @@ const apiUrl = `https://www.google.com/s2/favicons?domain=${srcDomain}&sz=${size
       format={"webp"}
       data-image-src={apiUrl}
     />
-    <div>
+    <div class="content">
       <h3>
-        <span>{title}</span>
+        <span class="title">{title}</span>
         <span class="arr">&rarr;</span>
       </h3>
       {description && <p>{description}</p>}
@@ -55,15 +55,22 @@ const apiUrl = `https://www.google.com/s2/favicons?domain=${srcDomain}&sz=${size
     margin: 0;
     text-transform: uppercase;
     transition: var(--transition);
+    width: 100%;
+  }
+
+  .content {
+    display: flex;
+    width: 100%;
+  }
+  .arr {
+    transition: var(--transition);
+    margin-left: auto;
   }
   p {
     color: var(--textColor);
     font-size: 0.8rem;
     margin-bottom: 0;
     margin-top: 0.5rem;
-  }
-  .arr {
-    transition: var(--transition);
   }
 
   .link {

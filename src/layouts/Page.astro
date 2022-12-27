@@ -20,7 +20,12 @@ const pageTitle = `${frontmatter.title} ~ ${frontmatter.description}`;
   accentOne={frontmatter.accentOne}
 >
   <main>
-    <Header title={frontmatter.title} description={frontmatter.description} />
+    <Header
+      title={frontmatter.title}
+      description={frontmatter.description}
+      logo={frontmatter.logoPath}
+      logoDescription={frontmatter.logoDescription}
+    />
     <!-- Social Media Links -->
     <Socials socials={allSocials} />
 
