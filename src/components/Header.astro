@@ -4,7 +4,7 @@ import Logo from "./Logo.astro";
 
 export interface Props {
   title: string;
-  description: string;
+  description?: string;
   logo?: AstroComponentInstance;
 }
 
@@ -16,9 +16,7 @@ const { title, description, logo } = Astro.props;
     <span class="title-text">{title}</span>
     <Logo />
   </h1>
-  <p class="instructions visually-hidden">
-    {description}
-  </p>
+  {description && <p class="instructions visually-hidden">{description}</p>}
 </header>
 
 <style>

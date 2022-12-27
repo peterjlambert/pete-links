@@ -6,6 +6,24 @@ display_url: "https://links.petelambertmusic.com"
 media_folder: public/assets
 public_folder: /assets
 collections:
+  - name: Pages
+    label: pages
+    folder: src/pages
+    preview_path: "{{ slug }}"
+    layout: ../../layouts/Layout.astro
+    create: true
+    delete: true
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+      - label: Accent Colour One
+        name: accentColorOne
+        widget: color
+        default: "#B9594D"
   - name: Sections
     label: sections
     folder: src/pages/sections

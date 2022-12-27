@@ -1,20 +1,14 @@
 ---
 import CardList, { LinkProps } from "./CardList.astro";
-import hexRgb from "hex-rgb";
 
 export interface Props {
   title: string;
   description?: string;
-  color?: string;
   links?: Array<LinkProps>;
   showHeader?: boolean;
 }
 
-const { title, description, links, color, showHeader } = Astro.props;
-
-const colorArray = color && hexRgb(color);
-const customAccentColor =
-  colorArray && `${colorArray.red}, ${colorArray.green}, ${colorArray.blue}`;
+const { title, description, links, showHeader } = Astro.props;
 ---
 
 <article class="link-section">
@@ -25,12 +19,7 @@ const customAccentColor =
   {links && links.length > 0 && <CardList links={links} />}
 </article>
 
-<style is:global define:vars={{ customAccentColor }}>
-  .link-section {
-    /* --accentColor: var(--customAccentColor); */
-  }
-</style>
-<style define:vars={{ customAccentColor }}>
+<style>
   .link-section {
     display: flex;
     flex-direction: column;

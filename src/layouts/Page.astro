@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Socials from "../components/Socials.astro";
+import Header from "../components/Header.astro";
+import Section from "../components/Section.astro";
+
+const allSocials = await Astro.glob("../pages/socials/*.md");
+const allSections = await Astro.glob("../pages/sections/*.md");
+const sortedSections = allSections.sort(
+  (a, b) => a.frontmatter.sortOrder - b.frontmatter.sortOrder
+);
+
+const { frontmatter } = Astro.props;
+const pageTitle = `${frontmatter.title} ~ ${frontmatter.description}`;
+---
+
+<Layout
+  title={pageTitle}
+  description={frontmatter.description}
+  accentColorOne={frontmatter.accentColorOne}
+>
+  <main>
+    <Header title={frontmatter.title} description={frontmatter.description} />
+    <!-- Social Media Links -->
+    <Socials socials={allSocials} />
+
+    <!-- Link Lists -->
+    {
+      sortedSections.map((section) => (
+        <Section
+          title={section.frontmatter.title}
+          description={section.frontmatter.description}
+          links={section.frontmatter.links}
+        />
+      ))
+    }
+  </main>
+</Layout>
