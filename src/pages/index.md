@@ -1,6 +1,6 @@
 ---
 title: Pete Lambert Music
-description: Links and all that
+description: Links & Stuff
 accentColorOne: "#B9594D"
-layout: "../layouts/Page.astro"
+layout: ../layouts/Page.astro
 ---
