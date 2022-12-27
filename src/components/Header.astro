@@ -5,17 +5,14 @@ export interface Props {
   title: string;
   description?: string;
   logo?: string;
-  logoDescription?: string;
 }
 
 const { title, description, logo, logoDescription } = Astro.props;
 ---
 
 <header class="site-header">
-  <h1>
-    <span class="title-text">{title}</span>
-    <Logo logoPath={logo} logoDescription={logoDescription} title={title} />
-  </h1>
+  <Logo logoPath={logo} title={title} />
+
   {description && <p class="instructions visually-hidden">{description}</p>}
 </header>
 
