@@ -51,6 +51,19 @@ const textColorRgb = `${textColorToRgb.red}, ${textColorToRgb.green}, ${textColo
       radial-gradient(at 5% 95%, hsla(0, 0%, 0%, 0.73) 0px, transparent 50%),
       radial-gradient(at 98% 51%, hsla(0, 0%, 100%, 0.02) 0px, transparent 50%),
       linear-gradient(0deg, hsla(0, 0%, 0%, 0.2) 0%, hsla(0, 0%, 0%, 0.2) 100%);
+
+    --growAnimation: grow 0.5s ease-in-out;
+  }
+
+  @keyframes grow {
+    0% {
+      transform: scale(0.5) translateY(90%);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1) translate(0);
+      opacity: 1;
+    }
   }
 
   html {
