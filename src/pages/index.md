@@ -1,7 +1,7 @@
 ---
 title: Pete Lambert Music
 description: Links & Stuff
-logo: /assets/plm.svg
+logo: /assets/pl.png
 textColor: "#FFFFFF"
 accentOne: "#b9594d"
 layout: ../layouts/Page.astro
