@@ -53,6 +53,7 @@ const textColorRgb = `${textColorToRgb.red}, ${textColorToRgb.green}, ${textColo
       linear-gradient(0deg, hsla(0, 0%, 0%, 0.2) 0%, hsla(0, 0%, 0%, 0.2) 100%);
 
     --growAnimation: grow 0.5s ease-in-out;
+    --fadeInAnimation: fadeIn 1s ease-in-out;
   }
 
   @keyframes grow {
@@ -62,6 +63,15 @@ const textColorRgb = `${textColorToRgb.red}, ${textColorToRgb.green}, ${textColo
     }
     100% {
       transform: scale(1) translate(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
       opacity: 1;
     }
   }
