@@ -70,7 +70,14 @@ const isSvg = logoPath && logoPath?.endsWith(".svg");
           <span class="visually-hidden">{title}</span>
         </>
       ) : (
-        <Image src={logoPath} alt={title} format="webp" />
+        <Image
+          src={logoPath}
+          alt={title}
+          format="webp"
+          height="80"
+          aspectRatio={4 / 1}
+          fit="inside"
+        />
       )
     ) : (
       title
