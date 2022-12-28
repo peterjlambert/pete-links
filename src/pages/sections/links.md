@@ -4,7 +4,7 @@ title: Links
 color: "#ff855d"
 description: " "
 links:
-  - label: Listen to The Things I Think
+  - label: Pete Lambert Website
     url: https://petelambertmusic.com
     description: ""
   - label: T-shirts, hoodies & other merch
