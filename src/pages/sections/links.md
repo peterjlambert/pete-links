@@ -14,7 +14,7 @@ links:
     url: https://petelambert.teemill.com
     description: ""
   - label: Upcoming shows
-    url: https://www.petelambertmusic.com/upcoming-shows
+    url: https://www.petelambertmusic.com/shows/
   - label: Tip jar
     url: https://www.buymeacoffee.com/petelambert
   - label: Buy it on Bandcamp
