@@ -4,6 +4,9 @@ title: Links
 color: "#ff855d"
 description: " "
 links:
+  - label: "NEW SINGLE: Every Time"
+    url: https://distrokid.com/hyperfollow/petelambert/every-time
+    description: Pre-save the new single now!
   - label: Pete Lambert Website
     url: https://petelambertmusic.com
     description: ""
