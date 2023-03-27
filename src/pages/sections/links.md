@@ -4,7 +4,8 @@ title: Links
 color: "#ff855d"
 description: " "
 links:
-  - label: "PRE-SAVE: Every Time and you might win a t-shirt"
+  - label: "PRE-SAVE & WIN: Pre-save Every Time on Spotify and you might win a
+      t-shirt"
     url: https://distrokid.com/hyperfollow/petelambert/every-time
     description: ""
   - label: Pete Lambert Website
