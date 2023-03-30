@@ -4,8 +4,8 @@ title: Links
 color: "#ff855d"
 description: " "
 links:
-  - label: Listen to ‘Every Time’
-    url: https://distrokid.com/hyperfollow/petelambert/every-time
+  - label: Listen to ‘Every Time’ on Spotify
+    url: https://open.spotify.com/track/6JXawAKosNHeLlr45nHa5R?si=2f3ff79416024e9c
     description: ""
   - label: Pete Lambert Website
     url: https://petelambertmusic.com
