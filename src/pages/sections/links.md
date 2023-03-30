@@ -7,6 +7,12 @@ links:
   - label: Listen to ‘Every Time’ on Spotify
     url: https://open.spotify.com/track/6JXawAKosNHeLlr45nHa5R?si=2f3ff79416024e9c
     description: ""
+  - label: Listen to 'Every Time' on Apple Music
+    url: https://music.apple.com/gb/album/every-time-single/1673454890
+  - label: Listen to 'Every Time' on Amazon
+    url: https://music.amazon.com/albums/B0BWFP3S5N?marketplaceId=A1F83G8C2ARO7P&musicTerritory=GB&ref=dm_sh_OMWVayuvfyhmitzCFQSnsu8wd&trackAsin=B0BWFRN182
+  - label: Listen to 'Every Time' on Tidal
+    url: https://tidal.com/browse/track/278082415
   - label: Pete Lambert Website
     url: https://petelambertmusic.com
     description: ""
@@ -20,12 +26,12 @@ links:
   - label: Buy it on Bandcamp
     url: https://petelambertmusic.bandcamp.com/track/the-things-i-think
   - label: Listen on Spotify
-    url: https://open.spotify.com/track/44yFoN2Zx34JuQZDFCt2Zq?si=902eaedfbe1a4c03
+    url: https://open.spotify.com/artist/1ZfM7DvQZdEvJ0nHBOzwKg?si=MhNnjP3DQKCayjcyKUVx2Q
   - label: Listen on Apple Music
-    url: https://music.apple.com/gb/album/the-things-i-think/1656127999?i=1656128000
+    url: https://music.apple.com/gb/artist/pete-lambert/1656107024
   - label: Listen on Amazon Music
-    url: https://music.amazon.com/albums/B0BN7G1839?marketplaceId=A1F83G8C2ARO7P&musicTerritory=GB&ref=dm_sh_J0wB7Wc7tfa1oswVOjRoNvSqR&trackAsin=B0BN6VSKMM
+    url: https://music.amazon.com/artists/B0BDS6T87B/pete-lambert
   - label: Listen on Tidal
-    url: https://tidal.com/browse/album/262364727
+    url: https://tidal.com/browse/artist/35769160
 sortOrder: "1"
 ---
