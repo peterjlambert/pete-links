@@ -21,6 +21,8 @@ links:
     description: ""
   - label: Upcoming shows
     url: https://www.petelambertmusic.com/shows/
+  - label: Subscribe to newsletter
+    url: https://petelambertmusic.substack.com/
   - label: Tip jar
     url: https://www.buymeacoffee.com/petelambert
   - label: Buy it on Bandcamp
