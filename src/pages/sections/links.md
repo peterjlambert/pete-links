@@ -26,7 +26,7 @@ links:
   - label: Tip jar
     url: https://www.buymeacoffee.com/petelambert
   - label: Buy it on Bandcamp
-    url: https://petelambertmusic.bandcamp.com/track/the-things-i-think
+    url: https://petelambertmusic.bandcamp.com/
   - label: Listen on Spotify
     url: https://open.spotify.com/artist/1ZfM7DvQZdEvJ0nHBOzwKg?si=MhNnjP3DQKCayjcyKUVx2Q
   - label: Listen on Apple Music
