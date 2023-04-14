@@ -4,6 +4,8 @@ title: Links
 color: "#ff855d"
 description: " "
 links:
+  - label: Join the mailing list
+    url: https://petelambertmusic.substack.com/
   - label: Listen to ‘Every Time’ on Spotify
     url: https://open.spotify.com/track/6JXawAKosNHeLlr45nHa5R?si=2f3ff79416024e9c
     description: ""
@@ -21,8 +23,6 @@ links:
     description: ""
   - label: Upcoming shows
     url: https://www.petelambertmusic.com/shows/
-  - label: Subscribe to newsletter
-    url: https://petelambertmusic.substack.com/
   - label: Tip jar
     url: https://www.buymeacoffee.com/petelambert
   - label: Buy it on Bandcamp
