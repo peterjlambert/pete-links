@@ -6,13 +6,13 @@ description: " "
 links:
   - label: Join the mailing list
     url: https://petelambertmusic.substack.com/
-  - label: Listen to 'Every Time' on 🍏Music
-    url: https://music.apple.com/gb/album/every-time-single/1673454890
   - label: Listen to ‘Every Time’ on Spotify
     url: https://open.spotify.com/track/6JXawAKosNHeLlr45nHa5R?si=2f3ff79416024e9c
     description: ""
   - label: Every Time Official Lyric Video
     url: https://www.youtube.com/watch?v=FAE7oOkXNG8
+  - label: Listen to 'Every Time' on 🍏Music
+    url: https://music.apple.com/gb/album/every-time-single/1673454890
   - label: Listen to 'Every Time' on Amazon
     url: https://music.amazon.com/albums/B0BWFP3S5N?marketplaceId=A1F83G8C2ARO7P&musicTerritory=GB&ref=dm_sh_OMWVayuvfyhmitzCFQSnsu8wd&trackAsin=B0BWFRN182
   - label: Listen to 'Every Time' on Tidal
