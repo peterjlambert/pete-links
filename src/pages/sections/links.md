@@ -4,7 +4,7 @@ title: Links
 color: "#ff855d"
 description: " "
 links:
-  - label: John Jenkins Sheffield Tickets
+  - label: "John Jenkins Sheffield Tickets "
     url: https://johnjenkinsmusic.com/event/4990183/631063479/john-jenkins-with-pippa-murdie-tuebrook-album-release-tour
   - label: Every Time Official Lyric Video
     url: https://www.youtube.com/watch?v=FAE7oOkXNG8
