@@ -86,19 +86,19 @@ const textColorRgb = `${textColorToRgb.red}, ${textColorToRgb.green}, ${textColo
     background-color: var(--bgColor);
     background-image: var(--bgGradient);
     background-size: cover;
-    --bgGradiantTopColor: rgba(var(--accentOneRgb), 1);
-    --bgGradiantBottomColor: rgba(var(--accentOneRgb), 0);
-    background-image: var(--bgGradient),
-      linear-gradient(
-        to bottom,
-        var(--bgGradiantTopColor) 0%,
-        var(--bgGradiantBottomColor) 100vh
-      );
+
     background-attachment: fixed;
     background-size: cover 100%;
     background-repeat: no-repeat;
   }
   body {
+    --bgGradiantTopColor: rgba(var(--accentOneRgb), 1);
+    --bgGradiantBottomColor: rgba(var(--accentOneRgb), 0);
+    background-image: linear-gradient(
+      to bottom,
+      var(--bgGradiantTopColor) 0%,
+      var(--bgGradiantBottomColor) 20vh
+    );
     margin: 0;
     height: 100%;
     display: flex;
