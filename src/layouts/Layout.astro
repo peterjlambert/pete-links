@@ -56,6 +56,10 @@ const textColorRgb = `${textColorToRgb.red}, ${textColorToRgb.green}, ${textColo
     --fadeInAnimation: fadeIn 1s ease-in-out;
   }
 
+  * {
+    box-sizing: border-box;
+  }
+
   @keyframes grow {
     0% {
       transform: scale(0.5) translateY(90%);
@@ -86,7 +90,6 @@ const textColorRgb = `${textColorToRgb.red}, ${textColorToRgb.green}, ${textColo
     background-color: var(--bgColor);
     background-image: var(--bgGradient);
     background-size: cover;
-
     background-attachment: fixed;
     background-size: cover 100%;
     background-repeat: no-repeat;
@@ -97,17 +100,17 @@ const textColorRgb = `${textColorToRgb.red}, ${textColorToRgb.green}, ${textColo
     background-image: linear-gradient(
       to bottom,
       var(--bgGradiantTopColor) 0%,
-      var(--bgGradiantBottomColor) 20vh
+      var(--bgGradiantBottomColor) 20vh,
+      var(--bgGradiantBottomColor) 80vh,
+      var(--bgGradiantTopColor) 100%
     );
     margin: 0;
-    height: 100%;
-    display: flex;
   }
 
   main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 3rem;
+    max-width: 72ch;
   }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
