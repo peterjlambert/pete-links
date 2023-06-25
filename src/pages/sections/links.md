@@ -6,10 +6,10 @@ description: " "
 links:
   - label: PRESAVE NEW SINGLE - "Never Die"
     url: https://distrokid.com/hyperfollow/petelambert/never-die
+  - label: Follow me on Instagram
+    url: https://instagram.com/petelambertmusic
   - label: Leave a tip (if you like)
     url: https://www.buymeacoffee.com/petelambert
-  - label: Listen on Amazon Music
-    url: https://music.amazon.com/artists/B0BDS6T87B/pete-lambert
   - label: "John Jenkins Sheffield Tickets "
     url: https://johnjenkinsmusic.com/event/4990183/631063479/john-jenkins-with-pippa-murdie-tuebrook-album-release-tour
   - label: Pete Lambert Website
@@ -30,7 +30,7 @@ links:
     url: https://music.apple.com/gb/artist/pete-lambert/1656107024
   - label: Listen on Tidal
     url: https://tidal.com/browse/artist/35769160
-  - label: Follow me on Instagram
-    url: https://instagram.com/petelambertmusic
+  - label: Listen on Amazon Music
+    url: https://music.amazon.com/artists/B0BDS6T87B/pete-lambert
 sortOrder: "1"
 ---
