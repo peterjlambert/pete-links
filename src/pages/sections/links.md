@@ -10,8 +10,6 @@ links:
     url: https://instagram.com/petelambertmusic
   - label: Leave a tip (if you like)
     url: https://www.buymeacoffee.com/petelambert
-  - label: "John Jenkins Sheffield Tickets "
-    url: https://johnjenkinsmusic.com/event/4990183/631063479/john-jenkins-with-pippa-murdie-tuebrook-album-release-tour
   - label: Pete Lambert Website
     url: https://petelambertmusic.com
     description: ""
