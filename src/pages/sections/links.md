@@ -6,6 +6,8 @@ description: " "
 links:
   - label: PRESAVE NEW SINGLE - "Never Die"
     url: https://distrokid.com/hyperfollow/petelambert/never-die
+  - label: Never Die music video
+    url: https://www.youtube.com/watch?v=LcUEeMiG6F0
   - label: Follow me on Instagram
     url: https://instagram.com/petelambertmusic
   - label: Leave a tip (if you like)
