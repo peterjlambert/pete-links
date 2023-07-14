@@ -4,8 +4,8 @@ title: Links
 color: "#ff855d"
 description: " "
 links:
-  - label: PRESAVE NEW SINGLE - "Never Die"
-    url: https://distrokid.com/hyperfollow/petelambert/never-die
+  - label: NEW SINGLE - "Never Die" - OUT NOW
+    url: https://petelambertmusic.com/music/never-die
   - label: Never Die music video
     url: https://www.youtube.com/watch?v=LcUEeMiG6F0
   - label: Follow me on Instagram
