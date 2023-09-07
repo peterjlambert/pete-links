@@ -4,6 +4,8 @@ title: Links
 color: "#ff855d"
 description: " "
 links:
+  - label: Sheffield Gig Ticketd
+    url: https://www.ticketsource.co.uk/sgct/fir-chelle-millar-david-turley-and-pete-lambert/2023-09-14/19:30/t-lnxpmjy?fbclid=IwAR3o9FCYDq_q0F0f9z84nbL7N2UC4TILnzG2kqJgiQecCzDof24yhqqf2s8_aem_AeLdQtuHJsY3xTTN8e9q5V4GDbe4dwWixot4h6dANw4uZy9TcvWNk66WbiQ16XBlgy8
   - label: NEW SINGLE - "Never Die" - OUT NOW
     url: https://petelambertmusic.com/music/never-die
   - label: Never Die music video
