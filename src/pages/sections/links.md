@@ -6,6 +6,8 @@ description: " "
 links:
   - label: '"Never Die" - OUT NOW'
     url: https://petelambertmusic.com/music/never-die
+  - label: Follow me on Spotify
+    url: https://open.spotify.com/artist/1ZfM7DvQZdEvJ0nHBOzwKg?si=MhNnjP3DQKCayjcyKUVx2Q
   - label: Never Die music video
     url: https://www.youtube.com/watch?v=LcUEeMiG6F0
   - label: Follow me on Instagram
@@ -24,8 +26,6 @@ links:
     url: https://www.petelambertmusic.com/shows/
   - label: Buy it on Bandcamp
     url: https://petelambertmusic.bandcamp.com/
-  - label: Listen on Spotify
-    url: https://open.spotify.com/artist/1ZfM7DvQZdEvJ0nHBOzwKg?si=MhNnjP3DQKCayjcyKUVx2Q
   - label: Listen on Apple Music
     url: https://music.apple.com/gb/artist/pete-lambert/1656107024
   - label: Listen on Tidal
