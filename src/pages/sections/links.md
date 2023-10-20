@@ -4,8 +4,8 @@ title: Links
 color: "#ff855d"
 description: " "
 links:
-  - label: '"Never Die" - OUT NOW'
-    url: https://petelambertmusic.com/music/never-die
+  - label: '"Ghosts" - NEW SINGLE OUT NOW'
+    url: https://spotify.link/ZLpGGMTN2Db
   - label: Follow me on Spotify
     url: https://open.spotify.com/artist/1ZfM7DvQZdEvJ0nHBOzwKg?si=MhNnjP3DQKCayjcyKUVx2Q
   - label: Never Die music video
