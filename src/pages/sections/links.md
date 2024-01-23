@@ -4,8 +4,10 @@ title: Links
 color: "#ff855d"
 description: " "
 links:
+  - label: The Folly Sessions - Live Video
+    url: https://www.youtube.com/watch?v=Bq5d-UgOsiY
   - label: '"Ghosts" - NEW SINGLE OUT NOW'
-    url: https://spotify.link/ZLpGGMTN2Db
+    url: https://open.spotify.com/track/5w1PERAhFN28UYdLqFuHfz?si=ecc5f8387bba47cb
   - label: Follow me on Spotify
     url: https://open.spotify.com/artist/1ZfM7DvQZdEvJ0nHBOzwKg?si=MhNnjP3DQKCayjcyKUVx2Q
   - label: Never Die music video
