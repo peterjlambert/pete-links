@@ -4,6 +4,8 @@ title: Links
 color: "#ff855d"
 description: " "
 links:
+  - label: Pre-Save 'Long Shadow'
+    url: https://distrokid.com/hyperfollow/petelambert/long-shadow
   - label: The Folly Sessions - Live Video
     url: https://www.youtube.com/watch?v=Bq5d-UgOsiY
   - label: '"Ghosts" - NEW SINGLE OUT NOW'
