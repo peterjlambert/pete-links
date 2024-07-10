@@ -4,10 +4,10 @@ title: Links
 color: "#ff855d"
 description: " "
 links:
-  - label: NEW RELEASE! 'Long Shadow'
-    url: https://distrokid.com/hyperfollow/petelambert/long-shadow
-  - label: Newbald Live - supporting Bella Gaffney
-    url: https://www.eventbrite.co.uk/e/newbald-live-bella-gaffney-tickets-769768226487?aff=aff0bandsintown&fbclid=IwAR2SQrtdTijhVcacZou0Zte_53gFGTfjizr8ZEXPYh1tFUbL2KB-za59FDY&bit_userid=${user_id}&appId=wf_jjj.oryyntnssarlzhfvp.pbz&comeFrom=242&artist_event_id=104963668
+  - label: Album Pre-Order 'I Told You A Story'
+    url: https://petelambertmusic.bandcamp.com/album/i-told-you-a-story
+  - label: "Album Launch Party Tickets "
+    url: https://www.wegottickets.com/event/626417
   - label: The Folly Sessions - Live Video
     url: https://www.youtube.com/watch?v=Bq5d-UgOsiY
   - label: '"Ghosts" - NEW SINGLE OUT NOW'
