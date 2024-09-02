@@ -4,10 +4,8 @@ title: Links
 color: "#ff855d"
 description: " "
 links:
-  - label: Album Pre-Order 'I Told You A Story'
+  - label: Album out now! 'I Told You A Story'
     url: https://petelambertmusic.bandcamp.com/album/i-told-you-a-story
-  - label: "Album Launch Party Tickets "
-    url: https://www.wegottickets.com/event/626417
   - label: The Folly Sessions - Live Video
     url: https://www.youtube.com/watch?v=Bq5d-UgOsiY
   - label: Follow me on Spotify
