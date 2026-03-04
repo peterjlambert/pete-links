@@ -9,7 +9,7 @@ links:
   - label: Leave a tip (if you like)
     url: https://www.buymeacoffee.com/petelambert
   - label: Pete Lambert Website
-    url: https://petelambertmusic.com
+    url: https://www.petelambertmusic.com
     description: ""
   - label: Album out now! 'I Told You A Story'
     url: https://petelambertmusic.bandcamp.com/album/i-told-you-a-story
