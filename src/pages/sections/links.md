@@ -4,28 +4,22 @@ title: Links
 color: "#ff855d"
 description: " "
 links:
+  - label: Follow me on Instagram
+    url: https://instagram.com/petelambertmusic
+  - label: Leave a tip (if you like)
+    url: https://www.buymeacoffee.com/petelambert
+  - label: Pete Lambert Website
+    url: https://petelambertmusic.com
+    description: ""
   - label: Album out now! 'I Told You A Story'
     url: https://petelambertmusic.bandcamp.com/album/i-told-you-a-story
-  - label: The Folly Sessions - Live Video
-    url: https://www.youtube.com/watch?v=Bq5d-UgOsiY
   - label: Follow me on Spotify
     url: https://open.spotify.com/artist/1ZfM7DvQZdEvJ0nHBOzwKg?si=MhNnjP3DQKCayjcyKUVx2Q
   - label: Never Die music video
     url: https://www.youtube.com/watch?v=LcUEeMiG6F0
-  - label: Follow me on Instagram
-    url: https://instagram.com/petelambertmusic
-  - label: Pete Lambert Website
-    url: https://petelambertmusic.com
-    description: ""
-  - label: Join the mailing list
-    url: https://petelambertmusic.substack.com/
-  - label: Leave a tip (if you like)
-    url: https://www.buymeacoffee.com/petelambert
   - label: T-shirts, hoodies & other merch
     url: https://petelambert.teemill.com
     description: ""
-  - label: Upcoming shows
-    url: https://www.petelambertmusic.com/shows/
   - label: Buy it on Bandcamp
     url: https://petelambertmusic.bandcamp.com/
   - label: Listen on Apple Music
